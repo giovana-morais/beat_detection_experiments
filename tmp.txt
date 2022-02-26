@@ -1,7 +1,0 @@
-# criar um filtro passa baixa pra ver como ficam os áudios
-# entender porque usar essas frequências baixíssimas melhoram:
-    # algum instrumento específico?
-    # é sem querer?
-# passar áudios com frequências filtradas no madmom e ver se os resultados também melhoram
-# olhar para os espectrogramas e ver como ficam as divisões de frequência
-# analisar casos em que, independente da banda, as métricas ficam boas'
