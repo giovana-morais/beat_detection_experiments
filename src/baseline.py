@@ -14,14 +14,15 @@ import numpy as np
 
 base_path = Path.cwd().parent
 experiments_path = base_path / "experiments_results/baselines"
-dataset_path = base_path.parent.parent / "datasets/candombe"
+candombe_path = base_path.parent.parent / "datasets/candombe"
+SR = 44100
 
 def librosa_beats(audio):
-    bpm, beats = librosa.beat.beat_track(x, sr=SR, units="time")
+    bpm, beats = librosa.beat.beat_track(audio, sr=SR, units="time")
     return beats
 
 def essentia_beats(audio):
-    beats, confidence = es.BeatTrackerMultiFeature()(x)
+    beats, confidence = es.BeatTrackerMultiFeature()(audio)
     return beats
 
 #refence for implementation https://github.com/CPJKU/madmom/issues/403
